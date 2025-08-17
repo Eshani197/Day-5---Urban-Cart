@@ -1,0 +1,10 @@
+ul{
+    background-color: #676767;
+    color:azure;
+    justify-content:space-between;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}

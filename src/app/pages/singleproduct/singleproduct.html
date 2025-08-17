@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="product-card">
+        <div class="row p-4">
+          <div class="col-md-6">
+            <div class="text-center">
+              <figure class="figure">
+                <img src={{product.thumbnail}} class="figure-img img-fluid rounded" alt={{product.title}}>
+                <figcaption class="figure-caption text-end">{{product.title}}</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h1 class="h3">{{product.title}}</h1>
+            <p class="text-muted">{{product.description}}</p>
+            <div class="mb-3">
+              <span class="rating-stars">★★★☆☆</span>
+              <span class="ms-2">{{product.rating}} ({{product.reviews.length}} reviews)</span>
+            </div>
+            <div class="mb-3">
+              <span class="price-original">${{product.originalPrice}}</span>
+              <span class="price-current ms-2">${{product.price}}</span>
+              <span class="discount-badge ms-2">{{product.discountPercentage}}% OFF</span>
+            </div>
+            <div class="mb-3">
+              <span class="badge bg-success">{{product.availabilityStatus}}</span>
+              <span class="text-muted ms-2">{{product.stock}} units available</span>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Quantity (Min: {{product.minimumOrderQuantity}})</label>
+              <input type="number" class="form-control w-50" value="{{product.minimumOrderQuantity}}"
+                min="{{product.minimumOrderQuantity}}">
+            </div>
+            <button class="btn btn-primary btn-lg">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="p-4">
+          <h4>Product Information</h4>
+          <div class="row">
+            <div class="col-md-6">
+              <p><strong>Brand:</strong> {{product.brand}}</p>
+              <p><strong>Category:</strong> {{product.category}}</p>
+              <p><strong>SKU:</strong> {{product.sku}}</p>
+              <p><strong>Weight:</strong> {{product.weight}}g</p>
+            </div>
+            <div class="col-md-6">
+              <p><strong>Dimensions:</strong> {{product.dimensions.width}} × {{product.dimensions.height}} ×
+                {{product.dimensions.depth}} cm</p>
+              <p><strong>Warranty:</strong> {{product.warrantyInformation}}</p>
+              <p><strong>Shipping:</strong> {{product.shippingInformation}}</p>
+              <p><strong>Return Policy:</strong> {{product.returnPolicy}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="text-center" style="padding: 20px; background-color: #ffffff;">
+  <p>&copy; 2025 Eshani Anilkumar</p>
+</footer>
